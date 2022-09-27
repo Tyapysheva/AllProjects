@@ -1,0 +1,15 @@
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\bin\Debug\net6.0\InfoAuto.exe
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\bin\Debug\net6.0\InfoAuto.deps.json
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\bin\Debug\net6.0\InfoAuto.runtimeconfig.json
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\bin\Debug\net6.0\InfoAuto.dll
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\bin\Debug\net6.0\InfoAuto.pdb
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.csproj.AssemblyReference.cache
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.AssemblyInfoInputs.cache
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.AssemblyInfo.cs
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.csproj.CoreCompileInputs.cache
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.dll
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\refint\InfoAuto.dll
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.pdb
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\InfoAuto.genruntimeconfig.cache
+C:\Users\Irina_Tiapysheva\source\repos\InfoAuto\InfoAuto\obj\Debug\net6.0\ref\InfoAuto.dll
