@@ -10,10 +10,10 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class CountTypesCommand : Command
     {
-        CalculateAuto command;
+        AutoAccounting command;
         List<Auto> list;
 
-        public CountTypesCommand(CalculateAuto command, List<Auto> list)
+        public CountTypesCommand(AutoAccounting command, List<Auto> list)
         {
             this.command = command;
             this.list = list;
@@ -21,7 +21,7 @@ namespace InfoAuto.AutoInfoCommands
 
         public void Execute()
         {
-            Console.WriteLine(command.countTypesAuto(list));
+            Console.WriteLine(command.CountTypesAuto(list));
         }
     }
 }

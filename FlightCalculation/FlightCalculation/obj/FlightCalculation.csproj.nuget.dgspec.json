@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj": {}
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj": {
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj",
+        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj",
         "projectName": "FlightCalculation",
-        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj",
+        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\FlightCalculation\\FlightCalculation\\FlightCalculation.csproj",
         "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\FlightCalculation\\FlightCalculation\\obj\\",
+        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\FlightCalculation\\FlightCalculation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",

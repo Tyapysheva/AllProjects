@@ -1,7 +1,7 @@
-﻿using FlightCalculation.flyable_object.@abstract;
-using FlightCalculation.@interface;
+﻿using FlightCalculation.FlyableObjects.Abstract;
+using FlightCalculation.Interface;
 
-namespace FlightCalculation.flyable_object
+namespace FlightCalculation.FlyableObjects
 
 {
     class Bird : FlyableObject, IFlyable

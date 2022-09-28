@@ -1,8 +1,8 @@
-﻿using FlightCalculation.exception;
-using FlightCalculation.flyable_object.@abstract;
-using FlightCalculation.@interface;
+﻿using FlightCalculation.ProjectException;
+using FlightCalculation.FlyableObjects.Abstract;
+using FlightCalculation.Interface;
 
-namespace FlightCalculation.flyable_object
+namespace FlightCalculation.FlyableObjects
 {
     class Airplane : FlyableObject, IFlyable
     {

@@ -15,24 +15,15 @@ namespace CarPark.xml
 {
     public class WorkWithXML
     {
+        private static string startElement = "Transport";
         public static void WriteTransportsToXml(List<Transport> transports, string fileName)
         {
-           
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.OmitXmlDeclaration = false;
-            settings.CloseOutput = false;
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("", "");
-
-            using (var writer = XmlWriter.Create(fileName, settings))
+            using (XmlWriter writer = CreateXMLDocAndStartElement(fileName, startElement))
             {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("Transport");
-
                 foreach (Transport transport in transports)
                 {
                     var serializer = new XmlSerializer(transport.GetType());
-                    serializer.Serialize(writer, transport, ns);
+                    serializer.Serialize(writer, transport, GetXMLNamespace());
 
                     Console.WriteLine("Object has been serialized");
                 }
@@ -41,27 +32,18 @@ namespace CarPark.xml
 
         public static void WriteTransportsGroupByToXml(List<IGrouping<TypeTransmission, Transport>> transports, string fileName)
         {
-           
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.OmitXmlDeclaration = false;
-            settings.CloseOutput = false;
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("", "");
 
-            using (var writer = XmlWriter.Create(fileName, settings))
+            using (XmlWriter writer = CreateXMLDocAndStartElement(fileName, startElement))
             {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("Transport");
-
                 foreach (var group in transports)
                 {
                     writer.WriteStartElement("Group");
-                    writer.WriteAttributeString("name", $"{group.Key.ToString()}");
+                    writer.WriteAttributeString("name", $"{group.Key}");
 
                     foreach (Transport transport in group)
                     {
                         var serializer = new XmlSerializer(transport.GetType());
-                        serializer.Serialize(writer, transport, ns);
+                        serializer.Serialize(writer, transport, GetXMLNamespace());
 
                         Console.WriteLine("Object has been serialized");
                     }
@@ -72,8 +54,8 @@ namespace CarPark.xml
 
         public static void WritePowerTypeNumberOfEngineInXml(List<Transport> list, string fileName)
         {
-            XmlDocument xmlDoc = new XmlDocument();
 
+            XmlDocument xmlDoc = new XmlDocument();
             XmlNode rootNode = xmlDoc.CreateElement(nameof(Transport));
             xmlDoc.AppendChild(rootNode);
             foreach (var transport in list)
@@ -101,6 +83,28 @@ namespace CarPark.xml
             xmlDoc.Save(fileName);
         }
 
+        private static XmlWriterSettings GetXMLSettings()
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.OmitXmlDeclaration = false;
+            settings.CloseOutput = false;
+            return settings;
+        }
+
+        private static XmlSerializerNamespaces GetXMLNamespace()
+        {
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("", "");
+            return ns;
+        }
+
+        private static XmlWriter CreateXMLDocAndStartElement(string fileName, string startElem)
+        {
+            XmlWriter writer = XmlWriter.Create(fileName, GetXMLSettings());
+            writer.WriteStartDocument();
+            writer.WriteStartElement(startElem);
+            return writer;
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-﻿using FlightCalculation.exception;
+﻿using FlightCalculation.ProjectException;
 
 namespace FlightCalculation
 {
@@ -20,7 +20,7 @@ namespace FlightCalculation
             get => x;
             set
             {
-                checkPositiveNumber(value);
+                CheckPositiveNumber(value);
                 x = value;
             }
         }
@@ -29,7 +29,7 @@ namespace FlightCalculation
             get => y;
             set
             {
-                checkPositiveNumber(value);
+                CheckPositiveNumber(value);
                 y = value;
             }
         }
@@ -38,11 +38,11 @@ namespace FlightCalculation
             get => z;
             set
             {
-                checkPositiveNumber(value);
+                CheckPositiveNumber(value);
                 z = value;
             }
         }
-        private void checkPositiveNumber(double number)
+        private void CheckPositiveNumber(double number)
         {
             if (number < 0)
             {

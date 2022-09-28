@@ -1,5 +1,5 @@
 ﻿using System;
-using FlightCalculation.flyable_object;
+using FlightCalculation.FlyableObjects;
 
 namespace FlightCalculation
 {

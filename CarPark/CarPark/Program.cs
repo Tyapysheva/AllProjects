@@ -42,42 +42,34 @@ namespace Carpark
             PassengerCar passengerCar2 = new PassengerCar(engine4, chassis4, transmission4);
 
             List<Transport> listTransport = new List<Transport>();
-            /*
-                        TransportCollectionUtility.AddTransport(, truck);
-                        TransportCollectionUtility.AddTransport(listTransport, bus);
-                        TransportCollectionUtility.AddTransport(listTransport, scooter);
-                        TransportCollectionUtility.AddTransport(listTransport, passengerCar);
-                        TransportCollectionUtility.AddTransport(listTransport, passengerCar2);
-                        TransportCollectionUtility.AddTransport(listTransport, new PassengerCar());*/
 
-         
             List<Transport> truckAndBus = new List<Transport>();
             truckAndBus.AddRange(SorterTransportUtility.selectTransportFromListByType(listTransport, typeof(Bus)));
             truckAndBus.AddRange(SorterTransportUtility.selectTransportFromListByType(listTransport, typeof(Truck)));
 
-            List<Transport> test = new List<Transport>();
-            test.Add(truck);
-            test.Add(bus);
-            test.Add(scooter);
-            test.Add(passengerCar);
+            List<Transport> testList = new List<Transport>();
+            testList.Add(truck);
+            testList.Add(bus);
+            testList.Add(scooter);
+            testList.Add(passengerCar);
 
 
-            TransportCollectionUtility tsC = new TransportCollectionUtility(test);
-            foreach (var one in tsC)
+            TransportCollectionUtility transportCollection = new TransportCollectionUtility(testList);
+            foreach (var transport in transportCollection)
             {
-                Console.WriteLine(one);
+                Console.WriteLine(transport);
             }
-            tsC.GetTransportByParameter("power", "400");
+            transportCollection.GetTransportByParameter("power", "400");
                
-            foreach (var one in tsC.UpdateTransportWithSerialNumber(passengerCar2, 127)) 
+            foreach (var transport in transportCollection.UpdateTransportWithSerialNumber(passengerCar2, 127)) 
             {
-                Console.WriteLine(one);
+                Console.WriteLine(transport);
             }
 
 
-            WorkWithXML.WritePowerTypeNumberOfEngineInXml(truckAndBus, "Sortedfile.xml");
-            WorkWithXML.WriteTransportsToXml(SorterTransportUtility.selectTransportWithEngineCapacity(listTransport, 1.5), "transport.xml");
-            WorkWithXML.WriteTransportsGroupByToXml(SorterTransportUtility.selectTransportGroupByTransmissionType(listTransport), "group.xml");
+         //   WorkWithXML.WritePowerTypeNumberOfEngineInXml(truckAndBus, "Sortedfile.xml");
+            WorkWithXML.WriteTransportsToXml(SorterTransportUtility.selectTransportWithEngineCapacity(testList, 1.5), "transport.xml");
+           // WorkWithXML.WriteTransportsGroupByToXml(SorterTransportUtility.selectTransportGroupByTransmissionType(listTransport), "group.xml");
         }
 
 

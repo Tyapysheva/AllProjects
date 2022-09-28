@@ -8,19 +8,19 @@ using InfoAuto.AutoInfoCommands.Interface;
 
 namespace InfoAuto.AutoInfoCommands.Manager
 {
-    public class Register
+    public class CommandRegister
     {
-        private static CalculateAuto calculateAuto = new CalculateAuto();
+        private static AutoAccounting autoAccounting = new AutoAccounting();
         public static void RegisterCountTypesAuto(List<Auto> listAuto)
         {
-            Command countTypesAuto = new CountTypesCommand(calculateAuto, listAuto);
+            Command countTypesAuto = new CountTypesCommand(autoAccounting, listAuto);
             CommandManager.Instance()
-                          .Register("countTypesAuto", countTypesAuto);
+                          .Register("CountTypesAuto", countTypesAuto);
         }
         public static void RegisterAveragePriceAll(List<Auto> listAuto)
         {
 
-            Command averagePriceAllCommand = new AveragePriceAllCommand(calculateAuto, listAuto);
+            Command averagePriceAllCommand = new AveragePriceAllCommand(autoAccounting, listAuto);
 
             CommandManager.Instance()
                           .Register("averagePriceAll", averagePriceAllCommand);
@@ -28,7 +28,7 @@ namespace InfoAuto.AutoInfoCommands.Manager
         }
         public static void RegisterAveragePriceType(List<Auto> listAuto, string carMark)
         {
-            Command averagePriceTypeCommand = new AveragePriceTypeCommand(calculateAuto, listAuto, carMark);
+            Command averagePriceTypeCommand = new AveragePriceTypeCommand(autoAccounting, listAuto, carMark);
             CommandManager.Instance()
                           .Register("averagePriceType", averagePriceTypeCommand);
 
@@ -36,9 +36,9 @@ namespace InfoAuto.AutoInfoCommands.Manager
 
         public static void RegisterCountAllAuto(List<Auto> listAuto)
         {
-            Command countAllAuto = new CountAllAutoCommand(calculateAuto, listAuto);
+            Command countAllAuto = new CountAllAutoCommand(autoAccounting, listAuto);
             CommandManager.Instance()
-                          .Register("countAllAuto", countAllAuto);
+                          .Register("CountAllAuto", countAllAuto);
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj": {}
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj": {
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj",
         "projectName": "NumeralSystem",
-        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj",
+        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\NumeralSystem\\NumeralSystem\\NumeralSystem.csproj",
         "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\NumeralSystem\\NumeralSystem\\obj\\",
+        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\NumeralSystem\\NumeralSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",

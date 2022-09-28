@@ -10,11 +10,11 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class AveragePriceTypeCommand : Command
     {
-        CalculateAuto command;
+        AutoAccounting command;
         List<Auto> list;
         string carMark;
 
-        public AveragePriceTypeCommand(CalculateAuto command, List<Auto> list, string carMark)
+        public AveragePriceTypeCommand(AutoAccounting command, List<Auto> list, string carMark)
         {
             this.command = command;
             this.list = list;
@@ -23,7 +23,7 @@ namespace InfoAuto.AutoInfoCommands
 
         public void Execute()
         {
-            Console.WriteLine(command.countAveragePriceAuto(list, carMark));
+            Console.WriteLine(command.CountAveragePriceAuto(list, carMark));
         }
     }
 }

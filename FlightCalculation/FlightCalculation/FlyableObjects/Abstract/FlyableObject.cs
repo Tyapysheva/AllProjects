@@ -1,4 +1,4 @@
-﻿namespace FlightCalculation.flyable_object.@abstract
+﻿namespace FlightCalculation.FlyableObjects.Abstract
 {
     abstract class FlyableObject
     {

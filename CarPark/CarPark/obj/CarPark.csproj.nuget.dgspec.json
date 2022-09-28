@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\CarPark\\CarPark\\CarPark.csproj": {}
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\CarPark\\CarPark\\CarPark.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\CarPark\\CarPark\\CarPark.csproj": {
+    "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\CarPark\\CarPark\\CarPark.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\CarPark\\CarPark\\CarPark.csproj",
+        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\CarPark\\CarPark\\CarPark.csproj",
         "projectName": "CarPark",
-        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\CarPark\\CarPark\\CarPark.csproj",
+        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\CarPark\\CarPark\\CarPark.csproj",
         "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\CarPark\\CarPark\\obj\\",
+        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\CarPark\\CarPark\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",

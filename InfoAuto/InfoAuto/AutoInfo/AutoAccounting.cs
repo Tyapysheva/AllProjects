@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace InfoAuto.AutoInfo
 {
-    public class CalculateAuto
+    public class AutoAccounting
     {
-        public int countTypesAuto(List<Auto> autoList)
+        public int CountTypesAuto(List<Auto> autoList)
         {
             return autoList.Select(car => car.CarMake).Distinct().Count();
         }
 
-        public int countAllAuto(List<Auto> autoList)
+        public int CountAllAuto(List<Auto> autoList)
         {
             return autoList.Select(car => car.Quantity).Sum();
         }
 
-        public double countAveragePriceAll(List<Auto> autoList)
+        public double CountAveragePriceAll(List<Auto> autoList)
         {
             double totalPrice = autoList.Select(x => x.Quantity * x.CostForUnit).Sum();
 
@@ -29,7 +29,7 @@ namespace InfoAuto.AutoInfo
             return totalPrice / totalQuantity;
         }
 
-        public double countAveragePriceAuto(List<Auto> autoList, string carMakeInput)
+        public double CountAveragePriceAuto(List<Auto> autoList, string carMakeInput)
         {
             if (autoList.FindAll(car => car.CarMake.Equals(carMakeInput)).Count() != 0)
             {

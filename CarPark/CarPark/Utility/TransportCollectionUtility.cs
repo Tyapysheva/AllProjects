@@ -14,10 +14,10 @@ namespace CarPark.utility
     public class TransportCollectionUtility : List<Transport>
     {
         private List<Transport> listTransport;
-        List<string> fieldsName = new List<string>();
-        List<string> foundObjects = new List<string>();
 
-        IList<Type> nonRecursiveTypes = new List<Type> {
+        private  List<string> foundObjects = new List<string>();
+
+        private IList<Type> nonRecursiveTypes = new List<Type> {
             typeof(int),
             typeof(string),
             typeof(Single),

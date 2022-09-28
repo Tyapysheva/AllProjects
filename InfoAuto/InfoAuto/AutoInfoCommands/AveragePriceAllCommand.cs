@@ -10,10 +10,10 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class AveragePriceAllCommand : Command
     {
-        CalculateAuto command;
+        AutoAccounting command;
         List<Auto> list; 
 
-        public AveragePriceAllCommand(CalculateAuto command, List<Auto> list)
+        public AveragePriceAllCommand(AutoAccounting command, List<Auto> list)
         {
             this.command = command;
             this.list = list;   
@@ -21,7 +21,7 @@ namespace InfoAuto.AutoInfoCommands
 
         public void Execute()
         {
-            Console.WriteLine(command.countAveragePriceAll(list));
+            Console.WriteLine(command.CountAveragePriceAll(list));
         }
     }
 }

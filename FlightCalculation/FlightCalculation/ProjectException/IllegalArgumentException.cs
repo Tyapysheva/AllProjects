@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace FlightCalculation.exception
+namespace FlightCalculation.ProjectException
 {
     [Serializable]
     internal class IllegalArgumentException : Exception

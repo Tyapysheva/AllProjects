@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\InfoAuto\\InfoAuto\\InfoAuto.csproj",
+      "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\InfoAuto\\InfoAuto\\InfoAuto.csproj",
       "projectName": "InfoAuto",
-      "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\InfoAuto\\InfoAuto\\InfoAuto.csproj",
+      "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\InfoAuto\\InfoAuto\\InfoAuto.csproj",
       "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\InfoAuto\\InfoAuto\\obj\\",
+      "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\AllProjects\\AllProjects\\InfoAuto\\InfoAuto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",

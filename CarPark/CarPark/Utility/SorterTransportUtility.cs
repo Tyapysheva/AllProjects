@@ -24,8 +24,6 @@ namespace CarPark.utility
             List<IGrouping<TypeTransmission, Transport>> groupByTransmission = transports
                 .GroupBy(o => o.Transmission.TypeTransmission).OrderBy(o => o.Key).ToList();
 
-            List<Transport> listTransport = new List<Transport>();
-
             return groupByTransmission;
         }
 

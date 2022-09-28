@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlightCalculation.@interface
+namespace FlightCalculation.Interface
 {
     internal interface IFlyable
     {
