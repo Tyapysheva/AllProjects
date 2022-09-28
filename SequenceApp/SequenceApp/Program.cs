@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine( ActionWithSequense.CalculateUniqueSequense(ActionWithSequense.InputSring()));
+            Console.WriteLine( ActionWithSequense.CalculateRepetedSequense(ActionWithSequense.InputSring()));
         }
     }
 

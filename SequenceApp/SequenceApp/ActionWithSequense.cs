@@ -12,106 +12,129 @@
                 Console.WriteLine("Input sequence\r");
                 sequenceInput = "" + Console.ReadLine();
             }
-            return sequenceInput.ToLower();
+            return sequenceInput;
         }
 
         public static int CalculateUniqueSequense(string text)
         {
             int current = 1;
             int max = 0;
-            for (int i = 0; i < text.Length; i++)
+            if (!string.IsNullOrWhiteSpace(text))
             {
-
-                if (text.Length - 1 != i)
+                for (int i = 0; i < text.Length; i++)
                 {
-                    if (!text[i].Equals(text[i + 1]))
+
+                    if (text.Length - 1 != i)
                     {
-                        current++;
+                        if (!text[i].Equals(text[i + 1]))
+                        {
+                            current++;
+                        }
+
+                        else
+                        {
+                            current = 1;
+                        }
                     }
-                    else
+                    else if (text.Length == 1)
                     {
                         current = 1;
                     }
-                }
-                else if (text.Length == 1)
-                {
-                    current = 1;
-                }
 
-                if (max < current)
-                {
-                    max = current;
+                    if (max < current)
+                    {
+                        max = current;
+                    }
+
                 }
 
             }
-            return max;
+            else
+            {
+                current = 0;
+            }
+                return max;
         }
 
         public static int CalculateRepetedSequense(string text)
         {
-            
+            text = text.ToLower();
             int current = 1;
             int max = 0;
-            for (int i = 0; i < text.Length; i++)
+            if (!string.IsNullOrWhiteSpace(text))
             {
-                if (text.Length - 1 != i)
+                for (int i = 0; i < text.Length; i++)
                 {
-                    if (text[i].Equals(text[i + 1]) && (text[i] >= 'a' && text[i] <= 'z'))
+                    if (text.Length - 1 != i && (text[i] >= 'a' && text[i] <= 'z'))
                     {
-                        current++;
+                        if (text[i].Equals(text[i + 1]))
+                        {
+                            current++;
+                        }
+                        else
+                        {
+                            current = 1;
+                        }
                     }
-
-                    else
+                    else if (!(text[i] >= 'a' && text[i] <= 'z'))
+                    {
+                        current = 0;
+                    }
+                    else if (text.Length == 1 && (text[i] >= 'a' && text[i] <= 'z'))
                     {
                         current = 1;
                     }
+                    if (max < current)
+                    {
+                        max = current;
+                    }
                 }
-                else if (text.Length == 1)
-                {
-                    current = 1;
-                }
-
-                if (max < current)
-                {
-                    max = current;
-                }
-
+            }
+            else
+            {
+                current = 0;
             }
             return max;
-
         }
 
         public static int CalculateRepetedNumberSequense(string text)
         {
             int current = 1;
             int max = 0;
-            for (int i = 0; i < text.Length; i++)
+            if (!string.IsNullOrWhiteSpace(text))
             {
-                if (text.Length - 1 != i)
+                for (int i = 0; i < text.Length; i++)
                 {
-                    if (text[i].Equals(text[i + 1]) && (text[i] >= '0' && text[i] <= '9'))
+                    if (text.Length - 1 != i && (text[i] >= '0' && text[i] <= '9'))
                     {
-                        current++;
+                        if (text[i].Equals(text[i + 1]))
+                        {
+                            current++;
+                        }
+                        else
+                        {
+                            current = 1;
+                        }
                     }
-                    else
+                    else if (!(text[i] >= '0' && text[i] <= '9'))
+                    {
+                        current = 0;
+                    }
+                    else if (text.Length == 1 && (text[i] >= '0' && text[i] <= '9'))
                     {
                         current = 1;
                     }
-                }
-                else if (text.Length == 1)
-                {
-                    current = 1;
-                }
-                else
-                {
-                    current = 0;
+
+                    if (max < current)
+                    {
+                        max = current;
+                    }
                 }
 
-                if (max < current)
-                {
-                    max = current;
-                }
-
+            }
+            else
+            {
+                current = 0;
             }
             return max;
 

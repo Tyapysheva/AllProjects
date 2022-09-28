@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
+      "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
       "projectName": "SequenceApp",
-      "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
+      "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
       "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\obj\\",
+      "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",

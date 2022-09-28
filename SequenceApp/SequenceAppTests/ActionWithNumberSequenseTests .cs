@@ -109,7 +109,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateRepetedNumberSequense(testStr);
 
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(0, result);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(1, result, $"Expected 0 - Actual {result}");
         }
 
         [TestMethod()]
@@ -28,7 +28,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(0, result, $"Expected 0 - Actual {result}");
         }
 
         [TestMethod()]
@@ -38,7 +38,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(0, result, $"Expected 0 - Actual {result}");
         }
 
 
@@ -49,7 +49,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(1, result, $"Expected 1 - Actual {result}");
         }
 
         [TestMethod()]
@@ -59,7 +59,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(3, result);
+            Assert.AreEqual(3, result, $"Expected 3 - Actual {result}");
         }
 
         [TestMethod()]
@@ -69,7 +69,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(4, result, $"Expected 4 - Actual {result}");
         }
 
         [TestMethod()]
@@ -79,7 +79,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(5, result, $"Expected 5 - Actual {result}");
         }
 
         [TestMethod()]
@@ -89,7 +89,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(4, result,$"Expected 4 - Actual {result}");
         }
 
         [TestMethod()]
@@ -99,7 +99,7 @@ namespace SequenceApp.Tests
 
             int result = ActionWithSequense.CalculateUniqueSequense(testStr);
 
-            Assert.AreEqual(3, result);
+            Assert.AreEqual(3, result, $"Expected 3 - Actual {result}");
         }
     }
 }

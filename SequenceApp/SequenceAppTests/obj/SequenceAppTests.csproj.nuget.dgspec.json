@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj": {}
+    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj": {
+    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj",
+        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj",
         "projectName": "SequenceAppTests",
-        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj",
+        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceAppTests\\SequenceAppTests.csproj",
         "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceAppTests\\obj\\",
+        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceAppTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj": {
-                "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj"
+              "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj": {
+                "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj": {
+    "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
+        "projectUniqueName": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
         "projectName": "SequenceApp",
-        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
+        "projectPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\SequenceApp.csproj",
         "packagesPath": "C:\\Users\\Irina_Tiapysheva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\SequenceApp\\SequenceApp\\obj\\",
+        "outputPath": "C:\\Users\\Irina_Tiapysheva\\source\\repos\\AllProjects\\SequenceApp\\SequenceApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Irina_Tiapysheva\\AppData\\Roaming\\NuGet\\NuGet.Config",
