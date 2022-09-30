@@ -1,4 +1,4 @@
-﻿namespace CarPark.transport_parts
+﻿namespace CarPark.TransportParts.Enum
 {
     public enum TypeEngine
     {

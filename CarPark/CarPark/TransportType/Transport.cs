@@ -1,30 +1,26 @@
 ﻿using System.Xml.Serialization;
-using CarPark.transport_parts;
-using CarPark.utility;
+using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_type
+namespace CarPark.TransportType
 {
     [Serializable]
-
     public abstract class Transport
     {
         protected Engine engine;
         protected Chassis chassis;
         protected Transmission transmission;
-
         protected string model;
         public Transport()
         {
-
         }
-
         public Transport(Engine engine, Chassis chassis, Transmission transmission)
         {
             Engine = engine;
             Chassis = chassis;
             Transmission = transmission;
         }
-
         public Engine Engine
         {
             get => engine;
@@ -34,7 +30,6 @@ namespace CarPark.transport_type
                 engine = value;
             }
         }
-
         public Chassis Chassis
         {
             get => chassis;

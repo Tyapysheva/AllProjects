@@ -10,8 +10,8 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class CountTypesCommand : Command
     {
-        AutoAccounting command;
-        List<Auto> list;
+        private AutoAccounting command;
+        private List<Auto> list;
 
         public CountTypesCommand(AutoAccounting command, List<Auto> list)
         {

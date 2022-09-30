@@ -4,7 +4,7 @@ using FlightCalculation.Interface;
 namespace FlightCalculation.FlyableObjects
 
 {
-    class Bird : FlyableObject, IFlyable
+    public class Bird : FlyableObject, IFlyable
     {
         private double velocity;
         private double distance;
@@ -12,14 +12,12 @@ namespace FlightCalculation.FlyableObjects
         public Bird(Coordinate currentCoordinate) : base(currentCoordinate)
         {
         }
-
         public override double GetChangableVelocity()
         {
             Random rnd = new Random();
             velocity = rnd.Next(1, 20);
             return velocity;
         }
-
         public double FlyTo(Coordinate newCoordinate)
         {
             distance = base.CalculateDistance(newCoordinate, CurrentCoordinate);

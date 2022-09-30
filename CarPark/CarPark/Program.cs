@@ -5,16 +5,17 @@ using System.Reflection.PortableExecutable;
 using System.Runtime.Intrinsics.X86;
 using System.Xml;
 using System.Xml.Serialization;
-using CarPark.transport_parts;
-using CarPark.transport_type;
-using CarPark.utility;
-using CarPark.xml;
+using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.TransportType;
+using CarPark.Utils;
+using CarPark.Xml;
 
 namespace Carpark
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Engine engine = new Engine(400F, 20.0F, TypeEngine.TruckEngine, 123);
             Chassis chassis = new Chassis(16, 43, 55000);
@@ -44,8 +45,8 @@ namespace Carpark
             List<Transport> listTransport = new List<Transport>();
 
             List<Transport> truckAndBus = new List<Transport>();
-            truckAndBus.AddRange(SorterTransportUtility.selectTransportFromListByType(listTransport, typeof(Bus)));
-            truckAndBus.AddRange(SorterTransportUtility.selectTransportFromListByType(listTransport, typeof(Truck)));
+            truckAndBus.AddRange(SorterTransportUtil.selectTransportFromListByType(listTransport, typeof(Bus)));
+            truckAndBus.AddRange(SorterTransportUtil.selectTransportFromListByType(listTransport, typeof(Truck)));
 
             List<Transport> testList = new List<Transport>();
             testList.Add(truck);
@@ -54,7 +55,7 @@ namespace Carpark
             testList.Add(passengerCar);
 
 
-            TransportCollectionUtility transportCollection = new TransportCollectionUtility(testList);
+            TransportCollectionUtil transportCollection = new TransportCollectionUtil(testList);
             foreach (var transport in transportCollection)
             {
                 Console.WriteLine(transport);
@@ -65,15 +66,10 @@ namespace Carpark
             {
                 Console.WriteLine(transport);
             }
-
-
          //   WorkWithXML.WritePowerTypeNumberOfEngineInXml(truckAndBus, "Sortedfile.xml");
-            WorkWithXML.WriteTransportsToXml(SorterTransportUtility.selectTransportWithEngineCapacity(testList, 1.5), "transport.xml");
+            WorkWithXML.WriteTransportsToXml(SorterTransportUtil.selectTransportWithEngineCapacity(testList, 1.5), "transport.xml");
            // WorkWithXML.WriteTransportsGroupByToXml(SorterTransportUtility.selectTransportGroupByTransmissionType(listTransport), "group.xml");
         }
-
-
     }
-
 }
 

@@ -2,44 +2,42 @@
 
 namespace FlightCalculation
 {
-    class Coordinate
+    public class Coordinate
     {
-        double x;
-        double y;
-        double z;
-
-        public Coordinate(double x, double y, double z)
+        private double coordinateX;
+        private double coordinateY;
+        private double coordinateZ;
+        public Coordinate(double coordinateX, double coordinateY, double coordinateZ)
         {
-            this.X = x;
-            this.Y = y;
-            this.Z = z;
+            this.CoordinateX = coordinateX;
+            this.CoordinateY = coordinateY;
+            this.CoordinateZ = coordinateZ;
         }
-
-        public double X
+        public double CoordinateX
         {
-            get => x;
+            get => coordinateX;
             set
             {
                 CheckPositiveNumber(value);
-                x = value;
+                coordinateX = value;
             }
         }
-        public double Y
+        public double CoordinateY
         {
-            get => y;
+            get => coordinateY;
             set
             {
                 CheckPositiveNumber(value);
-                y = value;
+                coordinateY = value;
             }
         }
-        public double Z
+        public double CoordinateZ
         {
-            get => z;
+            get => coordinateZ;
             set
             {
                 CheckPositiveNumber(value);
-                z = value;
+                coordinateZ = value;
             }
         }
         private void CheckPositiveNumber(double number)
@@ -49,10 +47,9 @@ namespace FlightCalculation
                 throw new IllegalArgumentException($"{number} must be positive");
             }
         }
-
         public override string? ToString()
         {
-            return $"Point[{X},{Y},{Z}]";
+            return $"Point[{CoordinateX},{CoordinateY},{CoordinateZ}]";
         }
     }
 

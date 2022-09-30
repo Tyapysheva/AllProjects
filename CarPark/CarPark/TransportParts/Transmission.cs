@@ -1,25 +1,23 @@
-﻿using CarPark.utility;
+﻿using CarPark.TransportParts.Enum;
 
-namespace CarPark.transport_parts
+using CarPark.Utils;
+
+namespace CarPark.TransportParts
 {
     public class Transmission
     {
         private TypeTransmission typeTransmission;
         private byte numberOfGears;
         private string manufacturer = "";
-
         public Transmission()
         {
-        
         }
-
         public Transmission(TypeTransmission typeTransmission, byte numberOfGears, string manufacturer)
         {
             TypeTransmission = typeTransmission;
             NumberOfGears = numberOfGears;
             Manufacturer = manufacturer;
         }
-
         public virtual TypeTransmission TypeTransmission
         {
             get => typeTransmission;

@@ -2,7 +2,6 @@
 {
     class ConsoleActions
     {
-
         public int InputNumber()
         {
             int number;
@@ -18,7 +17,6 @@
             }
             return number;
         }
-
         public int InputNumeralSystem()
         {
             int numeralSystemNumber;
@@ -34,32 +32,29 @@
             }
             return numeralSystemNumber;
         }
-
         public string ConvertDecimalIntToNumeralSystem(int number, int numeralSystemNumber)
         {
-            string result = "";
+            string resultString = "";
             List<char> buffer = new List<char>();
             do
             {
-                int x = number % numeralSystemNumber;
+                int remainderOfDivision = number % numeralSystemNumber;
                 number = number / numeralSystemNumber;
-                char z;
-                if (x < 10)
+                char resultChar;
+                if (remainderOfDivision < 10)
                 {
-                    z = Convert.ToChar('0' + x);
+                    resultChar = Convert.ToChar('0' + remainderOfDivision);
                 }
                 else
                 {
-                    z = Convert.ToChar('A' - 10 + x);
+                    resultChar = Convert.ToChar('A' - 10 + remainderOfDivision);
                 }
-                buffer.Add(z);
+                buffer.Add(resultChar);
             }
             while (number > 0);
             buffer.Reverse();
-            buffer.ForEach(x => result = result + x);
-            return result;
+            buffer.ForEach(resultChar => resultString = resultString + resultChar);
+            return resultString;
         }
-
     }
-
 }

@@ -8,6 +8,6 @@ namespace InfoAuto.AutoInfoCommands.Interface
 {
     public interface Command
     {
-        void Execute();
+         void Execute();
     }
 }

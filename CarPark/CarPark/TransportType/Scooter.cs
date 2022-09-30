@@ -1,23 +1,21 @@
-﻿using CarPark.transport_parts;
-using CarPark.utility;
+﻿using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_type
+namespace CarPark.TransportType
 {
     [Serializable]
     public class Scooter : Transport
     {
         public Scooter()
         {
-
         }
         public Scooter(Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission)
         {
             CheckEngine(engine);
             CheckChasis(chassis);
             CheckTransmission(transmission);
-
         }
-
         private void CheckEngine(Engine engine)
         {
             CompareUtil.CheckFieldWithSign("Scooter Engine power", engine.Power, CompareSign.Greater, 45);
@@ -26,17 +24,14 @@ namespace CarPark.transport_type
             CompareUtil.CheckFieldWithSign("Scooter Engine capacity", engine.Capacity, CompareSign.Less, 1);
             CompareUtil.CheckTypeEngine("Scooter Engine type", engine.TypeEngine, TypeEngine.ScooterEngine);
             this.engine = engine;
-
         }
         private void CheckTransmission(Transmission transmission)
         {
             CompareUtil.CheckTypeTransmission("Scooter Transmission type", typeof(Scooter), transmission.TypeTransmission);
             CompareUtil.CheckFieldWithSign("Scooter Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Greater, 1);
             CompareUtil.CheckFieldWithSign("Scooter Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Less, 4);
-
             this.transmission = transmission;
         }
-
         private void CheckChasis(Chassis chassis)
         {
             CompareUtil.CheckFieldWithSign("Scooter Chassis Permissible Load", chassis.PermissibleLoad, CompareSign.Greater, 59);
@@ -45,13 +40,11 @@ namespace CarPark.transport_type
             CompareUtil.CheckFieldWithSign("Scooter Chassis Number Of Wheels", chassis.NumberOfWheels, CompareSign.Less, 3);
             this.chassis = chassis;
         }
-
         public override string? ToString()
         {
             return "\nScooter:" + Engine + Chassis + Transmission;
         }
     }
-
 }
 
 

@@ -1,6 +1,7 @@
-﻿using CarPark.utility;
+﻿using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_parts
+namespace CarPark.TransportParts
 {
     public class Engine
     {
@@ -8,11 +9,9 @@ namespace CarPark.transport_parts
         private float capacity;
         private TypeEngine typeEngine;
         private long serialNumber;
-
         public Engine()
         {
         }
-
         public Engine(float power, float capacity, TypeEngine typeEngine, long serialNumber)
         {
             Power = power;
@@ -20,7 +19,6 @@ namespace CarPark.transport_parts
             TypeEngine = typeEngine;
             SerialNumber = serialNumber;
         }
-
         public float Power
         {
             get => power;
@@ -62,9 +60,6 @@ namespace CarPark.transport_parts
             return "\nEngine: \nType = " + TypeEngine +
                 "; Capacity = " + Capacity + "; Power = " + Power + "; Serial number = " + SerialNumber;
         }
-
     }
-
-
 }
 

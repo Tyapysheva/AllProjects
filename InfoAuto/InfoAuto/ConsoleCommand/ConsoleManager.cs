@@ -13,9 +13,9 @@ namespace InfoAuto.ConsoleCommand
         private string model;
         private int expression;
 
-        public void Menu()
+        public void OpenConsoleMenu()
         {
-            listAuto.Add(InputAutoParameter());
+            listAuto.Add(InputInConsoleAutoParameters());
             var flag = false;
 
             while (!flag)
@@ -31,7 +31,7 @@ namespace InfoAuto.ConsoleCommand
                 switch (expression)
                 {
                     case 1:
-                        listAuto.Add(InputAutoParameter());
+                        listAuto.Add(InputInConsoleAutoParameters());
                         break;
                     case 2:
                         CommandRegister.RegisterAveragePriceAll(listAuto);
@@ -65,7 +65,7 @@ namespace InfoAuto.ConsoleCommand
                 }
             }
         }
-        private Auto InputAutoParameter()
+        private Auto InputInConsoleAutoParameters()
         {
             Console.WriteLine("Enter Auto");
             carMake = EnterCarMake();

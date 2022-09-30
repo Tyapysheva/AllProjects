@@ -10,8 +10,8 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class AveragePriceAllCommand : Command
     {
-        AutoAccounting command;
-        List<Auto> list; 
+        private AutoAccounting command;
+        private List<Auto> list; 
 
         public AveragePriceAllCommand(AutoAccounting command, List<Auto> list)
         {

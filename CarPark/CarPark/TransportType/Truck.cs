@@ -1,8 +1,9 @@
 ﻿using System.Xml.Linq;
-using CarPark.transport_parts;
-using CarPark.utility;
+using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_type
+namespace CarPark.TransportType
 {
 
     [Serializable]
@@ -10,7 +11,6 @@ namespace CarPark.transport_type
     {
         public Truck() 
         {
-            
         }
         public Truck(Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission)
         {
@@ -18,7 +18,6 @@ namespace CarPark.transport_type
             CheckChasis(chassis);
             CheckTransmission(transmission);
         }
-
         private void CheckEngine(Engine engine)
         {
             CompareUtil.CheckFieldWithSign("Truck Engine power", engine.Power, CompareSign.Greater, 199);
@@ -33,10 +32,8 @@ namespace CarPark.transport_type
             CompareUtil.CheckTypeTransmission("Truck Transmission type", typeof(Truck), transmission.TypeTransmission);
             CompareUtil.CheckFieldWithSign("Truck Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Greater, 4);
             CompareUtil.CheckFieldWithSign("Truck Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Less, 17);
-
             this.transmission = transmission;
         }
-
         private void CheckChasis(Chassis chassis)
         {
             CompareUtil.CheckFieldWithSign("Truck Chassis Permissible Load", chassis.PermissibleLoad, CompareSign.Greater, 25000);
@@ -44,10 +41,8 @@ namespace CarPark.transport_type
             CompareUtil.CheckFieldWithSign("Truck Chassis Number Of Wheels", chassis.NumberOfWheels, CompareSign.Less, 32);
             this.chassis = chassis;
         }
-
         public override string? ToString()
         {
-
             return "\nTruck: " + Engine + Chassis + Transmission;
         }
     }

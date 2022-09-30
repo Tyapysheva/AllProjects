@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlightCalculation.Interface
 {
-    internal interface IFlyable
+    public interface IFlyable
     {
         public double FlyTo(Coordinate newCoordinate);
         public double GetFlyTime(Coordinate newCoordinate);

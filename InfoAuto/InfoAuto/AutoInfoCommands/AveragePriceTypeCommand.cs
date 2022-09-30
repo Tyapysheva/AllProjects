@@ -10,9 +10,9 @@ namespace InfoAuto.AutoInfoCommands
 {
     public class AveragePriceTypeCommand : Command
     {
-        AutoAccounting command;
-        List<Auto> list;
-        string carMark;
+        private AutoAccounting command;
+        private List<Auto> list;
+        private string carMark;
 
         public AveragePriceTypeCommand(AutoAccounting command, List<Auto> list, string carMark)
         {

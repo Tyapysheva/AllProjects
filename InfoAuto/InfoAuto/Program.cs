@@ -1,13 +1,13 @@
 ﻿using InfoAuto.ConsoleCommand;
 
 namespace InfoAuto {
-class Program
+public class Program
     {
         static void Main(string[] args)
         {
-            ConsoleManager manager = new ConsoleManager();
-           
-            manager.Menu();
+            ConsoleManager consoleManager = new ConsoleManager();
+
+            consoleManager.OpenConsoleMenu();
         }
     }
 }

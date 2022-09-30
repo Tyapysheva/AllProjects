@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CarPark.transport_parts;
-using CarPark.transport_type;
+using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
 using System.Xml;
+using CarPark.TransportType;
 
-namespace CarPark.utility
+namespace CarPark.Utils
 {
-    public class SorterTransportUtility
+    public class SorterTransportUtil
     {
         public static List<Transport> selectTransportWithEngineCapacity(List<Transport> transports, double capacity)
         {
@@ -18,7 +19,6 @@ namespace CarPark.utility
                 .ToList();
             return sort;
         }
-
         public static List<IGrouping<TypeTransmission, Transport>> selectTransportGroupByTransmissionType(List<Transport> transports)
         {
             List<IGrouping<TypeTransmission, Transport>> groupByTransmission = transports
@@ -26,15 +26,12 @@ namespace CarPark.utility
 
             return groupByTransmission;
         }
-
         public static List<Transport> selectTransportFromListByType(List<Transport> transports, Type type)
         {
             List<Transport> listEngine = transports
                 .Where(transport => transport.GetType().Equals(type))
                 .ToList();
-
             return listEngine;
         }
-
     }
 }

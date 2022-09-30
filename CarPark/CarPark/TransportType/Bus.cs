@@ -1,16 +1,15 @@
 ﻿using System.Xml.Serialization;
-using CarPark.transport_parts;
-using CarPark.utility;
+using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_type
+namespace CarPark.TransportType
 {
     [Serializable]
-
     public class Bus : Transport
     {
         public Bus()
         {
-
         }
         public Bus(Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission)
         {
@@ -18,7 +17,6 @@ namespace CarPark.transport_type
             CheckChasis(chassis);
             CheckTransmission(transmission);
         }
-
         private void CheckEngine(Engine engine)
         {
             CompareUtil.CheckFieldWithSign("Bus Engine power", engine.Power, CompareSign.Greater, 210);
@@ -27,17 +25,14 @@ namespace CarPark.transport_type
             CompareUtil.CheckFieldWithSign("Bus Engine capacity", engine.Capacity, CompareSign.Less, 8.5);
             CompareUtil.CheckTypeEngine("Bus Engine type", engine.TypeEngine, TypeEngine.BusEngine);
             this.engine = engine;
-
         }
         private void CheckTransmission(Transmission transmission)
         {
             CompareUtil.CheckTypeTransmission("Bus Transmission type", typeof(Bus), transmission.TypeTransmission);
             CompareUtil.CheckFieldWithSign("Bus Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Greater, 4);
             CompareUtil.CheckFieldWithSign("Bus Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Less, 11);
-
             this.transmission = transmission;
         }
-
         private void CheckChasis(Chassis chassis)
         {
             CompareUtil.CheckFieldWithSign("Bus Chassis Permissible Load", chassis.PermissibleLoad, CompareSign.Greater, 10000);
@@ -50,9 +45,6 @@ namespace CarPark.transport_type
         {
             return "\nBus:" + Engine + Chassis + Transmission;
         }
-
     }
-
-
 }
 

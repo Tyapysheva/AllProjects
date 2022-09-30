@@ -4,7 +4,7 @@ using FlightCalculation.Interface;
 
 namespace FlightCalculation.FlyableObjects
 {
-    class Drone : FlyableObject,IFlyable
+    public class Drone : FlyableObject, IFlyable
     {
         private double velocity = 260;
         private double distance;
@@ -12,9 +12,7 @@ namespace FlightCalculation.FlyableObjects
         public Drone(Coordinate currentCoordinate) : base(currentCoordinate)
         {
         }
-
         public double Velocity { set => velocity = value; }
-
         public double FlyTo(Coordinate newCoordinate)
         {
             distance = base.CalculateDistance(newCoordinate, CurrentCoordinate);
@@ -26,16 +24,14 @@ namespace FlightCalculation.FlyableObjects
             }
             return distance;
         }
-
         public double GetFlyTime(Coordinate newCoordinate)
         {
             time = FlyTo(newCoordinate) / velocity;
             double waitingTime = Math.Ceiling(time * 6);
-            time = time + waitingTime/60;
+            time = time + waitingTime / 60;
             Console.WriteLine($"\nDrone fly distance = {distance} in time = {time}");
             return time;
         }
-
         public override double GetChangableVelocity()
         {
             return this.velocity;

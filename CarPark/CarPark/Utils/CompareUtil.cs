@@ -5,89 +5,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarPark.CarException;
-using CarPark.transport_parts;
-using CarPark.transport_type;
+using CarPark.TransportParts.Enum;
+using CarPark.TransportType;
 
-namespace CarPark.utility
+namespace CarPark.Utils
 {
     public static class CompareUtil
     {
-        public static void CheckFieldWithSign(string fieldName, double obj, CompareSign sign, double num)
+        public static void CheckFieldWithSign(string fieldName, double currentValue, CompareSign sign, double number)
         {
             switch (sign)
             {
                 case CompareSign.Greater:
-                    if (obj < num)
+                    if (currentValue < number)
                     {
-                        throw new InitializationException($"{fieldName} value={obj} must be greater than {num}");
+                        throw new InitializationException($"{fieldName} value={currentValue} must be greater than {number}");
                     }
                     else
                     {
                         break;
                     }
                 case CompareSign.Less:
-                    if (obj > num)
+                    if (currentValue > number)
                     {
-                        throw new InitializationException($"{fieldName} value={obj} must be less than {num}");
+                        throw new InitializationException($"{fieldName} value={currentValue} must be less than {number}");
                     }
                     else
                     {
                         break;
                     }
-
                 default:
                     break;
             }
         }
-        public static void CheckFieldNotNull(string fieldName, object obj)
+        public static void CheckFieldNotNull(string fieldName, object fieldValue)
         {
-            if (obj.Equals(null))
+            if (fieldValue.Equals(null))
             {
                 throw new InitializationException($"{fieldName} must be not null");
             }
         }
-
-        public static void CheckTypeEngine(string fieldName, object obj, TypeEngine type)
+        public static void CheckTypeEngine(string fieldName, object fieldValue, TypeEngine type)
         {
-            if (!obj.Equals(type))
+            if (!fieldValue.Equals(type))
             {
                 throw new InitializationException($"{fieldName} must be {type}");
             }
-
         }
-
-        public static void CheckTypeTransmission(string fieldName, Type obj, TypeTransmission type)
+        public static void CheckTypeTransmission(string fieldName, Type type, TypeTransmission currentType)
         {
-            switch (type)
+            switch (currentType)
             {
                 case TypeTransmission.Manual:
                 case TypeTransmission.Automatic:
-
-                    if (typeof(Scooter).Equals(obj))
+                    if (typeof(Scooter).Equals(type))
                     {
-                        throw new InitializationException($"{fieldName} must be {type}");
+                        throw new InitializationException($"{fieldName} must be {currentType}");
                     }
                     else
                     {
                         break;
                     }
-
                 case TypeTransmission.ContinuoslyVariable:
-                    if (obj.Equals(typeof(Truck)) || obj.Equals(typeof(Bus)))
+                    if (type.Equals(typeof(Truck)) || type.Equals(typeof(Bus)))
                     {
-                        throw new InitializationException($"{fieldName} must be {type}");
+                        throw new InitializationException($"{fieldName} must be {currentType}");
                     }
                     else
                     {
                         break;
                     }
-
                 default:
                     break;
             }
         }
     }
-
     public enum CompareSign
     {
         Greater,

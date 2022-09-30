@@ -1,14 +1,14 @@
-﻿using CarPark.transport_parts;
-using CarPark.utility;
+﻿using CarPark.TransportParts;
+using CarPark.TransportParts.Enum;
+using CarPark.Utils;
 
-namespace CarPark.transport_type
+namespace CarPark.TransportType
 {
     [Serializable]
     public class PassengerCar : Transport
     {
         public PassengerCar()
         {
-
         }
         public PassengerCar(Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission)
         {
@@ -16,7 +16,6 @@ namespace CarPark.transport_type
             CheckChasis(chassis);
             CheckTransmission(transmission);
         }
-
         private void CheckEngine(Engine engine)
         {
             CompareUtil.CheckFieldWithSign("Passenger Car Engine power", engine.Power, CompareSign.Greater, 99);
@@ -25,17 +24,14 @@ namespace CarPark.transport_type
             CompareUtil.CheckFieldWithSign("Passenger Car Engine capacity", engine.Capacity, CompareSign.Less, 6);
             CompareUtil.CheckTypeEngine("Passenger Car Engine type", engine.TypeEngine, TypeEngine.CarEngine);
             this.engine = engine;
-
         }
         private void CheckTransmission(Transmission transmission)
         {
             CompareUtil.CheckTypeTransmission("Passenger Car Transmission type", typeof(PassengerCar), transmission.TypeTransmission);
             CompareUtil.CheckFieldWithSign("Passenger Car Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Greater, 3);
             CompareUtil.CheckFieldWithSign("Passenger Car Transmission Number Of Gears", transmission.NumberOfGears, CompareSign.Less, 18);
-
             this.transmission = transmission;
         }
-
         private void CheckChasis(Chassis chassis)
         {
             CompareUtil.CheckFieldWithSign("Passenger Car Chassis Permissible Load", chassis.PermissibleLoad, CompareSign.Greater, 5000);

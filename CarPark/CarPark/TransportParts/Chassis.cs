@@ -1,26 +1,21 @@
-﻿using CarPark.utility;
+﻿using CarPark.Utils;
 
-namespace CarPark.transport_parts
+namespace CarPark.TransportParts
 {
     public class Chassis
     {
         public int numberOfWheels;
         private long number;
         private float permissibleLoad;
-
-
         public Chassis()
         {
-
         }
-
         public Chassis(int numberOfWheels, long number, float permissibleLoad)
         {
             NumberOfWheels = numberOfWheels;
             Number = number;
             PermissibleLoad = permissibleLoad;
         }
-
         public virtual int NumberOfWheels { get => numberOfWheels; 
             set
             {
@@ -44,7 +39,6 @@ namespace CarPark.transport_parts
         }
         public override string? ToString()
         {
-
             return "\nChassis: \nNumber = " + Number +
                 "; Number Of Wheels = " + NumberOfWheels + "; Permissible Load = " + PermissibleLoad;
         }
